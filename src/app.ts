@@ -1,13 +1,11 @@
-import express = require("express");
 import * as bodyParser from "body-parser";
+import express = require("express");
 
 export class App {
     public app: express.Application;
-    public port: number;
 
-    constructor(controllers: any, port: any) {
+    constructor(controllers: any, private port: number) {
         this.app = express();
-        this.port = port;
 
         this.initializeMiddlewares();
         this.initializeControllers(controllers);

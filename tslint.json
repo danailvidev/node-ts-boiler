@@ -3,9 +3,25 @@
     "extends": [
         "tslint:recommended"
     ],
-    "jsRules": {},
+    "jsRules": {
+        "no-console": false
+    },
     "rules": {
-        "trailing-comma": [ false ]
+        "trailing-comma": [
+            false
+        ],
+        "no-console": {
+            "severity": "warning",
+            "options": [
+                "log",
+                "error",
+                "debug",
+                "info",
+                "time",
+                "timeEnd",
+                "trace"
+            ]
+        }
     },
     "rulesDirectory": []
 }
